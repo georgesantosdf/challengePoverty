@@ -12,7 +12,7 @@ services:
   app-frontend:
     build:
       context: .
-      dockerfile: angular/app/Dockerfile
+      dockerfile: angular/Dockerfile
     ports:
       - "80:80"
     links:
