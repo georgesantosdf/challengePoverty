@@ -21,10 +21,10 @@ export class IndicadorService  {
 
     return this.http.get(
         this.BASE_PATH, {
+        headers: new HttpHeaders({'Content-Type': 'application/json'}),
         observe: "response",
         params: parametro
       }
-     
     ).pipe(
       map((response: any) => {
         console.log(response);
