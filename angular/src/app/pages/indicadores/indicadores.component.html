@@ -1,0 +1,47 @@
+<div class="container">
+
+    <div class="header-form">
+      <div fxLayout="row" fxLayout.xs="column">
+        <div class="content-form" fxFlex="65">
+              <div class="header-dados-pessoais">
+                <h3>Quantidade de pessoas que estão em situação de extrema pobreza no mundo</h3>
+              </div>
+              <form [formGroup]="form" class="mt-5">
+                <div fxLayout="column">
+                  <div fxLayout="row" fxLayout.xs="column">
+                      <div fxFlex="50" class="field">
+                          <mat-form-field appearance="outline" class="field-100">
+                              <input matInput placeholder="Informe o codigo do país" formControlName="pais">
+                              <app-error-form [control]="form.get('pais')" label="Pais"></app-error-form>
+                            </mat-form-field>
+                        </div>
+                      </div>
+                </div>
+                <div fxLayout="row" fxLayoutAlign="end center" class="btn-cadastro">
+                  <button mat-raised-button color="primary" (click)="consultaPais()">Consultar</button>
+                </div>
+
+                <!--<div class="mat-elevation-z8">
+                  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                
+                   
+                    <ng-container matColumnDef="position">
+                      <th mat-header-cell *matHeaderCellDef> No. </th>
+                      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                    </ng-container>
+                
+                 
+                    <ng-container matColumnDef="name">
+                      <th mat-header-cell *matHeaderCellDef> Name </th>
+                      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+                
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+                </div>-->
+              </form>
+        </div>
+      </div>
+    </div>
+</div>

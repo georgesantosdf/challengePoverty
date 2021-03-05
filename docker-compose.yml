@@ -1,0 +1,19 @@
+version: '3'
+
+services:
+  quarkus:
+    build:
+      context: .
+      dockerfile: src/main/docker/Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      ENV_CORS: http://localhost
+  app-frontend:
+    build:
+      context: .
+      dockerfile: app/Dockerfile
+    ports:
+      - "80:80"
+    links:
+           - "quarkus"
