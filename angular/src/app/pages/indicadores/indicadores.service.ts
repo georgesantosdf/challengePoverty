@@ -12,9 +12,7 @@ export class IndicadorService  {
   private BASE_PATH = "http://localhost:8080/indicador";
 
 
-  constructor(private http: HttpClient) {
-   
-  }
+  constructor(private http: HttpClient) {}
 
   public listIndicadorPobreza(codigoPais: string): Observable<any> {
     console.log(codigoPais);
